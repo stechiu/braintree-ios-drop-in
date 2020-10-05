@@ -1,96 +1,45 @@
 PODS:
-  - Braintree/Apple-Pay (4.34.0):
+  - Braintree/Apple-Pay (4.35.0):
     - Braintree/Core
-  - Braintree/Card (4.34.0):
+  - Braintree/Card (4.35.0):
     - Braintree/Core
-  - Braintree/Core (4.34.0)
-  - Braintree/PaymentFlow (4.34.0):
+  - Braintree/Core (4.35.0)
+  - Braintree/PaymentFlow (4.35.0):
     - Braintree/Card
     - Braintree/Core
     - Braintree/PayPalOneTouch
-  - Braintree/PayPal (4.34.0):
+  - Braintree/PayPal (4.35.0):
     - Braintree/Core
     - Braintree/PayPalOneTouch
-  - Braintree/PayPalDataCollector (4.34.0):
+  - Braintree/PayPalDataCollector (4.35.0):
     - Braintree/Core
     - Braintree/PayPalUtils
-  - Braintree/PayPalOneTouch (4.34.0):
+  - Braintree/PayPalOneTouch (4.35.0):
     - Braintree/Core
     - Braintree/PayPalDataCollector
     - Braintree/PayPalUtils
-  - Braintree/PayPalUtils (4.34.0)
-  - Braintree/UnionPay (4.34.0):
-    - Braintree/Card
-    - Braintree/Core
-  - Braintree/Venmo (4.34.0):
+  - Braintree/PayPalUtils (4.35.0)
+  - Braintree/Venmo (4.35.0):
     - Braintree/Core
     - Braintree/PayPalDataCollector
-  - BraintreeDropIn (8.1.1):
-    - BraintreeDropIn/DropIn (= 8.1.1)
-  - BraintreeDropIn/DropIn (8.1.1):
-    - Braintree/Card (~> 4.32)
-    - Braintree/Core (~> 4.32)
-    - Braintree/PaymentFlow (~> 4.32)
-    - Braintree/PayPal (~> 4.32)
-    - Braintree/UnionPay (~> 4.32)
-    - BraintreeDropIn/UIKit
-  - BraintreeDropIn/UIKit (8.1.1)
-  - Expecta (1.0.6)
   - InAppSettingsKit (3.1.2)
-  - OCMock (3.6)
-  - OHHTTPStubs (9.0.0):
-    - OHHTTPStubs/Default (= 9.0.0)
-  - OHHTTPStubs/Core (9.0.0)
-  - OHHTTPStubs/Default (9.0.0):
-    - OHHTTPStubs/Core
-    - OHHTTPStubs/JSON
-    - OHHTTPStubs/NSURLSession
-    - OHHTTPStubs/OHPathHelpers
-  - OHHTTPStubs/JSON (9.0.0):
-    - OHHTTPStubs/Core
-  - OHHTTPStubs/NSURLSession (9.0.0):
-    - OHHTTPStubs/Core
-  - OHHTTPStubs/OHPathHelpers (9.0.0)
-  - Specta (1.0.7)
-  - xcbeautify (0.8.0)
 
 DEPENDENCIES:
   - Braintree/Apple-Pay
   - Braintree/PaymentFlow
   - Braintree/PayPal
   - Braintree/Venmo
-  - BraintreeDropIn (from `./`)
-  - Expecta
   - InAppSettingsKit
-  - OCMock
-  - OHHTTPStubs
-  - Specta
-  - xcbeautify
 
 SPEC REPOS:
   trunk:
     - Braintree
-    - Expecta
     - InAppSettingsKit
-    - OCMock
-    - OHHTTPStubs
-    - Specta
-    - xcbeautify
-
-EXTERNAL SOURCES:
-  BraintreeDropIn:
-    :path: "./"
 
 SPEC CHECKSUMS:
-  Braintree: 48154e70306eb3e6c81eaa87bbc5c5988c0d2784
-  BraintreeDropIn: 2cf07a9041df45ff671586042dbaf7b5d2767347
-  Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
+  Braintree: 7ff6755ba50506e403dc03779ae68c5ccf6b9808
   InAppSettingsKit: 988142fed825524ae44dd0d93684daf8f0358b8c
-  OCMock: 5ea90566be239f179ba766fd9fbae5885040b992
-  OHHTTPStubs: cb29d2a9d09a828ecb93349a2b0c64f99e0db89f
-  Specta: 3e1bd89c3517421982dc4d1c992503e48bd5fe66
-  xcbeautify: 34e667aac66c3357794431c9dd4037808cdab025
 
-PODFILE CHECKSUM: 3d954c4b165c75add886b9c6b53e412afc04e4ba
+PODFILE CHECKSUM: be686eb441b721382984c462ea63b48a195ef741
 
 COCOAPODS: 1.9.3
