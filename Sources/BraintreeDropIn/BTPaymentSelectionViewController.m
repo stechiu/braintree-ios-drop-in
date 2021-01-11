@@ -379,12 +379,12 @@ static BOOL _vaultedCardAppearAnalyticSent = NO;
     NSString *typeString = paymentInfo.type;
     
     cell.highlighted = NO;
-    cell.descriptionLabel.text = @"Description";
+    cell.descriptionLabel.text = paymentInfo.paymentDescription;
     cell.titleLabel.text = [BTUIKViewUtil nameForPaymentMethodType:[BTUIKViewUtil paymentOptionTypeForPaymentInfoType:typeString]];
     cell.paymentOptionCardView.paymentOptionType = [BTUIKViewUtil paymentOptionTypeForPaymentInfoType:typeString];
 
     cell.isAccessibilityElement = YES;
-    cell.accessibilityLabel = [NSString stringWithFormat:@"%@-%@", typeString, @"Description"];
+    cell.accessibilityLabel = [NSString stringWithFormat:@"%@-%@", typeString, paymentInfo.paymentDescription];
 
     return cell;
 }
