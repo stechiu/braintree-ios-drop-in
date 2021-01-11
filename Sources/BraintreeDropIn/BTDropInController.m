@@ -1,32 +1,23 @@
 #import <BraintreeDropIn/BTDropInController.h>
-#import <BraintreeDropIn/BTVaultManagementViewController.h>
-#import <BraintreeDropIn/BTCardFormViewController.h>
-#import <BraintreeDropIn/BTPaymentSelectionViewController.h>
 
+#import "BTVaultManagementViewController.h"
+#import "BTCardFormViewController.h"
+#import "BTPaymentSelectionViewController.h"
 #import "BTEnrollmentVerificationViewController.h"
 #import "BTAPIClient_Internal_Category.h"
-#if __has_include("BraintreeCore.h")
-#import "BraintreeCore.h"
-#else
-#import <BraintreeCore/BraintreeCore.h>
-#endif
-#if __has_include("BraintreeCard.h")
-#import "BraintreeCard.h"
-#import "BraintreeUnionPay.h"
-#else
-#import <BraintreeCard/BraintreeCard.h>
-#import <BraintreeUnionPay/BraintreeUnionPay.h>
-#endif
-#if __has_include("BraintreePaymentFlow.h")
-#import "BraintreePaymentFlow.h"
-#else
-#import <BraintreePaymentFlow/BraintreePaymentFlow.h>
-#endif
 
 #ifdef COCOAPODS
+#import <Braintree/BraintreeCore.h>
+#import <Braintree/BraintreeCard.h>
+#import <Braintree/BraintreeUnionPay.h>
 #import <Braintree/BraintreeThreeDSecure.h>
+#import <Braintree/BraintreePaymentFlow.h>
 #else
+#import <BraintreeCore/BraintreeCore.h>
+#import <BraintreeCard/BraintreeCard.h>
+#import <BraintreeUnionPay/BraintreeUnionPay.h>
 #import <BraintreeThreeDSecure/BraintreeThreeDSecure.h>
+#import <BraintreePaymentFlow/BraintreePaymentFlow.h>
 #endif
 
 #define BT_ANIMATION_SLIDE_SPEED 0.35

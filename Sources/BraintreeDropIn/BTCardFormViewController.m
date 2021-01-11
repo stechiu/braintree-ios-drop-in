@@ -1,29 +1,20 @@
-#import <BraintreeDropIn/BTCardFormViewController.h>
-#import <BraintreeDropIn/BTDropInController.h>
-#import <BraintreeDropIn/BTPaymentSelectionViewController.h>
+#import "BTPaymentSelectionViewController.h"
+#import "BTCardFormViewController.h"
 #import "BTEnrollmentVerificationViewController.h"
-#if __has_include("BraintreeCore.h")
-#import "BraintreeCore.h"
-#else
-#import <BraintreeCore/BraintreeCore.h>
-#endif
 #import "BTAPIClient_Internal_Category.h"
 #import "BTUIKBarButtonItem_Internal_Declaration.h"
 #import "BTEnrollmentVerificationViewController.h"
 #import "BTDropInUIUtilities.h"
-#if __has_include("BraintreeCard.h")
-#import "BraintreeCard.h"
+
+#ifdef COCOAPODS
+#import <Braintree/BraintreeCore.h>
+#import <Braintree/BraintreeCard.h>
+#import <Braintree/BraintreeUnionPay.h>
+#import <Braintree/BraintreePaymentFlow.h>
 #else
+#import <BraintreeCore/BraintreeCore.h>
 #import <BraintreeCard/BraintreeCard.h>
-#endif
-#if __has_include("BraintreeUnionPay.h")
-#import "BraintreeUnionPay.h"
-#else
 #import <BraintreeUnionPay/BraintreeUnionPay.h>
-#endif
-#if __has_include("BraintreePaymentFlow.h")
-#import "BraintreePaymentFlow.h"
-#else
 #import <BraintreePaymentFlow/BraintreePaymentFlow.h>
 #endif
 

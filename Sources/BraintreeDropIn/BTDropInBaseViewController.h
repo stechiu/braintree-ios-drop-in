@@ -1,7 +1,7 @@
 #import <UIKit/UIKit.h>
 #import <BraintreeDropIn/BTDropInRequest.h>
 
-#if __has_include(<Braintree/BraintreeCore.h>)
+#ifdef COCOAPODS
 #import <Braintree/BraintreeCore.h>
 #else
 #import <BraintreeCore/BraintreeCore.h>

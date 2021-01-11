@@ -1,14 +1,10 @@
 #import <UIKit/UIKit.h>
 
-#if __has_include(<BraintreeDropIn/BraintreeUIKit.h>)
+#ifdef COCOAPODS
 #import <BraintreeDropIn/BraintreeUIKit.h>
-#else
-#import <BraintreeUIKit/BraintreeUIKit.h>
-#endif
-
-#if __has_include(<Braintree/BraintreeCore.h>)
 #import <Braintree/BraintreeCore.h>
 #else
+#import <BraintreeUIKit/BraintreeUIKit.h>
 #import <BraintreeCore/BraintreeCore.h>
 #endif
 

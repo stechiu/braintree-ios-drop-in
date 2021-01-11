@@ -1,14 +1,10 @@
 #import <UIKit/UIKit.h>
 
-#if __has_include(<BraintreeDropIn/BTUIKPaymentOptionCardView.h>)
+#ifdef COCOAPODS
 #import <BraintreeDropIn/BTUIKPaymentOptionCardView.h>
+#import <Braintree/BTPaymentMethodNonce.h>
 #else
 #import <BraintreeUIKit/BTUIKPaymentOptionCardView.h>
-#endif
-
-#if __has_include("BTPaymentMethodNonce.h")
-#import "BTPaymentMethodNonce.h"
-#else
 #import <BraintreeCore/BTPaymentMethodNonce.h>
 #endif
 

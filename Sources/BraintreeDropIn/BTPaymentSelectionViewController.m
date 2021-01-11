@@ -1,34 +1,19 @@
-#import <BraintreeDropIn/BTPaymentSelectionViewController.h>
+#import "BTPaymentSelectionViewController.h"
 #import "BTUIPaymentMethodCollectionViewCell.h"
-#import <BraintreeDropIn/BTDropInController.h>
 #import "BTDropInPaymentSeletionCell.h"
 #import "BTAPIClient_Internal_Category.h"
 #import "BTUIKBarButtonItem_Internal_Declaration.h"
 #import "BTPaymentMethodNonce+DropIn.h"
 
-#if __has_include(<BraintreeDropIn/BraintreeUIKit.h>)
+#ifdef COCOAPODS
 #import <BraintreeDropIn/BraintreeUIKit.h>
+#import <Braintree/BraintreeCard.h>
+#import <Braintree/BraintreePayPal.h>
+#import <Braintree/BraintreeApplePay.h>
 #else
 #import <BraintreeUIKit/BraintreeUIKit.h>
-#endif
-
-#if __has_include("BraintreeCard.h")
-#import "BraintreeCard.h"
-#else
 #import <BraintreeCard/BraintreeCard.h>
-#endif
-
-#if __has_include("BraintreePayPal.h")
-#import "BraintreePayPal.h"
-#else
 #import <BraintreePayPal/BraintreePayPal.h>
-#endif
-
-#if __has_include("BraintreeApplePay.h")
-#define __BT_APPLE_PAY
-#import "BraintreeApplePay.h"
-#elif __has_include(<BraintreeApplePay/BraintreeApplePay.h>)
-#define __BT_APPLE_PAY
 #import <BraintreeApplePay/BraintreeApplePay.h>
 #endif
 
@@ -250,12 +235,10 @@ static BOOL _vaultedCardAppearAnalyticSent = NO;
                 }
             }
 
-#ifdef __BT_APPLE_PAY
             BTJSON *applePayConfiguration = self.configuration.json[@"applePay"];
             if ([applePayConfiguration[@"status"] isString] && ![[applePayConfiguration[@"status"] asString] isEqualToString:@"off"] && !self.dropInRequest.applePayDisabled && self.configuration.canMakeApplePayPayments) {
                 [activePaymentOptions addObject:@(BTUIKPaymentOptionTypeApplePay)];
             }
-#endif
 
             self.paymentOptionsData = [activePaymentOptions copy];
             [self.savedPaymentMethodsCollectionView reloadData];

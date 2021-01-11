@@ -1,17 +1,14 @@
-#import <BraintreeDropIn/BTVaultManagementViewController.h>
+#import "BTVaultManagementViewController.h"
 #import "BTDropInPaymentSeletionCell.h"
 #import "BTAPIClient_Internal_Category.h"
 #import "BTUIKBarButtonItem_Internal_Declaration.h"
 #import "BTPaymentMethodNonce+DropIn.h"
 
-#if __has_include("BraintreeCore.h")
-#import "BraintreeCore.h"
+#ifdef COCOAPODS
+#import <Braintree/BraintreeCore.h>
+#import <Braintree/BraintreeCard.h>
 #else
 #import <BraintreeCore/BraintreeCore.h>
-#endif
-#if __has_include("BraintreeCard.h")
-#import "BraintreeCard.h"
-#else
 #import <BraintreeCard/BraintreeCard.h>
 #endif
 
