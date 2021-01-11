@@ -76,7 +76,6 @@
 		4245D86A256C5C4E00F1A413 /* DemoBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoBaseViewController.swift; sourceTree = "<group>"; };
 		4245D86B256C5C4E00F1A413 /* ViewHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewHelpers.swift; sourceTree = "<group>"; };
 		4245D86C256C5C4E00F1A413 /* DemoDropInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoDropInViewController.swift; sourceTree = "<group>"; };
-		4245D86D256C5C4E00F1A413 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		4245D870256C5C4E00F1A413 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		4245D872256C5C4E00F1A413 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4245D873256C5C4E00F1A413 /* Braintree-Demo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Braintree-Demo-Prefix.pch"; sourceTree = "<group>"; };
@@ -167,7 +166,6 @@
 				4245D87A256C5C4E00F1A413 /* Features */,
 				4245D968256C627400F1A413 /* Assets.xcassets */,
 				4245D87D256C5C4E00F1A413 /* Merchant API Client */,
-				4245D86D256C5C4E00F1A413 /* README.md */,
 				4245D86E256C5C4E00F1A413 /* Supporting Files */,
 			);
 			path = Demo;

@@ -191,13 +191,13 @@
 		A56C41A31D8335BB000DFFAB /* BTUIPaymentMethodCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = A56C419D1D8335BB000DFFAB /* BTUIPaymentMethodCollectionViewCell.h */; };
 		A56C41A41D8335BB000DFFAB /* BTUIPaymentMethodCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A56C419E1D8335BB000DFFAB /* BTUIPaymentMethodCollectionViewCell.m */; };
 		A56C41AD1D8335C7000DFFAB /* BraintreeDropIn.h in Headers */ = {isa = PBXBuildFile; fileRef = A56C41A51D8335C7000DFFAB /* BraintreeDropIn.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A56C41AE1D8335C7000DFFAB /* BTCardFormViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A56C41A61D8335C7000DFFAB /* BTCardFormViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A56C41AF1D8335C7000DFFAB /* BTDropInBaseViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A56C41A71D8335C7000DFFAB /* BTDropInBaseViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A56C41AE1D8335C7000DFFAB /* BTCardFormViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A56C41A61D8335C7000DFFAB /* BTCardFormViewController.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		A56C41AF1D8335C7000DFFAB /* BTDropInBaseViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A56C41A71D8335C7000DFFAB /* BTDropInBaseViewController.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		A56C41B01D8335C7000DFFAB /* BTDropInController.h in Headers */ = {isa = PBXBuildFile; fileRef = A56C41A81D8335C7000DFFAB /* BTDropInController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A56C41B11D8335C7000DFFAB /* BTDropInRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = A56C41A91D8335C7000DFFAB /* BTDropInRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A56C41B21D8335C7000DFFAB /* BTDropInResult.h in Headers */ = {isa = PBXBuildFile; fileRef = A56C41AA1D8335C7000DFFAB /* BTDropInResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A56C41B31D8335C7000DFFAB /* BTPaymentSelectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A56C41AB1D8335C7000DFFAB /* BTPaymentSelectionViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A56C41B41D8335C7000DFFAB /* BTVaultManagementViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A56C41AC1D8335C7000DFFAB /* BTVaultManagementViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A56C41B31D8335C7000DFFAB /* BTPaymentSelectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A56C41AB1D8335C7000DFFAB /* BTPaymentSelectionViewController.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		A56C41B41D8335C7000DFFAB /* BTVaultManagementViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A56C41AC1D8335C7000DFFAB /* BTVaultManagementViewController.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		D6C2F3342239917F00DFF7E5 /* BTUIKSwitchFormField.h in Headers */ = {isa = PBXBuildFile; fileRef = D6C2F3322239917F00DFF7E5 /* BTUIKSwitchFormField.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D6C2F3352239917F00DFF7E5 /* BTUIKSwitchFormField.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C2F3332239917F00DFF7E5 /* BTUIKSwitchFormField.m */; };
 /* End PBXBuildFile section */
@@ -487,13 +487,9 @@
 			isa = PBXGroup;
 			children = (
 				A56C41A51D8335C7000DFFAB /* BraintreeDropIn.h */,
-				A56C41A61D8335C7000DFFAB /* BTCardFormViewController.h */,
-				A56C41A71D8335C7000DFFAB /* BTDropInBaseViewController.h */,
 				A56C41A81D8335C7000DFFAB /* BTDropInController.h */,
 				A56C41A91D8335C7000DFFAB /* BTDropInRequest.h */,
 				A56C41AA1D8335C7000DFFAB /* BTDropInResult.h */,
-				A56C41AB1D8335C7000DFFAB /* BTPaymentSelectionViewController.h */,
-				A56C41AC1D8335C7000DFFAB /* BTVaultManagementViewController.h */,
 			);
 			path = BraintreeDropIn;
 			sourceTree = "<group>";
@@ -774,6 +770,10 @@
 				A56C418C1D833568000DFFAB /* BTPaymentSelectionViewController.m */,
 				A56C41B71D833A6B000DFFAB /* BTUIKBarButtonItem_Internal_Declaration.h */,
 				A56C418D1D833568000DFFAB /* BTVaultManagementViewController.m */,
+				A56C41A61D8335C7000DFFAB /* BTCardFormViewController.h */,
+				A56C41A71D8335C7000DFFAB /* BTDropInBaseViewController.h */,
+				A56C41AB1D8335C7000DFFAB /* BTPaymentSelectionViewController.h */,
+				A56C41AC1D8335C7000DFFAB /* BTVaultManagementViewController.h */,
 				A56C41851D8334D7000DFFAB /* Custom Views */,
 				A56C416F1D833348000DFFAB /* Info.plist */,
 				A56C41841D8334D1000DFFAB /* Models */,
