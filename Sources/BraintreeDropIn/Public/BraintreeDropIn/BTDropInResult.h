@@ -6,9 +6,13 @@
 #import <BraintreeUIKit/BraintreeUIKit.h>
 #endif
 
-NS_ASSUME_NONNULL_BEGIN
+#if __has_include(<Braintree/BraintreeCore.h>)
+#import <Braintree/BraintreeCore.h>
+#else
+#import <BraintreeCore/BraintreeCore.h>
+#endif
 
-@class BTPaymentMethodNonce;
+NS_ASSUME_NONNULL_BEGIN
 
 @interface BTDropInResult : NSObject
 

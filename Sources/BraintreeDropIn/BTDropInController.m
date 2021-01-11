@@ -24,9 +24,9 @@
 #endif
 
 #ifdef COCOAPODS
-#import <Braintree/BTThreeDSecureResult.h>
+#import <Braintree/BraintreeThreeDSecure.h>
 #else
-#import <BraintreeThreeDSecure/BTThreeDSecureResult.h>
+#import <BraintreeThreeDSecure/BraintreeThreeDSecure.h>
 #endif
 
 #define BT_ANIMATION_SLIDE_SPEED 0.35

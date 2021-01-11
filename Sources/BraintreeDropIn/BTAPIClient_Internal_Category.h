@@ -6,10 +6,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class BTPaymentMethodNonce;
-@class BTHTTP;
-@class BTAnalyticsService;
-
 @interface BTAPIClient (Internal)
 
 @property (nonatomic, copy, nullable) NSString *tokenizationKey;
@@ -17,9 +13,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// Client metadata that is used for tracking the client session
 @property (nonatomic, readonly, strong) BTClientMetadata *metadata;
-
-/// Exposed for testing analytics
-@property (nonatomic, strong) BTAnalyticsService *analyticsService;
 
 /// Analytics should only be posted by internal clients.
 - (void)sendAnalyticsEvent:(NSString *)eventName;

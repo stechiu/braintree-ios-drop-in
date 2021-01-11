@@ -1,8 +1,13 @@
 #import <UIKit/UIKit.h>
+#import <BraintreeDropIn/BTDropInRequest.h>
+
+#if __has_include(<Braintree/BraintreeCore.h>)
+#import <Braintree/BraintreeCore.h>
+#else
+#import <BraintreeCore/BraintreeCore.h>
+#endif
 
 NS_ASSUME_NONNULL_BEGIN
-
-@class BTAPIClient, BTDropInRequest, BTConfiguration;
 
 /// The base UIViewController for the sub UIViewControllers using in Drop-In
 @interface BTDropInBaseViewController : UIViewController 

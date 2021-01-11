@@ -5,9 +5,18 @@
 #import <BraintreeUIKit/BraintreeUIKit.h>
 #endif
 
+#if __has_include(<Braintree/BraintreeCore.h>)
+#import <Braintree/BraintreeCore.h>
+#import <Braintree/BraintreeCard.h>
+#import <Braintree/BraintreeUnionPay.h>
+#else
+#import <BraintreeCore/BraintreeCore.h>
+#import <BraintreeCard/BraintreeCard.h>
+#import <BraintreeUnionPay/BraintreeUnionPay.h>
+#endif
+
 NS_ASSUME_NONNULL_BEGIN
 
-@class BTCardRequest, BTCardCapabilities, BTPaymentMethodNonce;
 @protocol BTCardFormViewControllerDelegate, BTDropInControllerDelegate;
 
 /// Contains form elements for entering card information.

@@ -8,7 +8,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class BTPaymentMethodNonce;
 @protocol BTDropInControllerDelegate;
 
 /// Contains form elements for editing vaulted payment methods.
