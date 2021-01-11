@@ -958,7 +958,6 @@
 				A56C41661D833348000DFFAB /* Frameworks */,
 				A56C41671D833348000DFFAB /* Headers */,
 				A56C41681D833348000DFFAB /* Resources */,
-				42621F0025A76E2E0057ECFE /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1068,25 +1067,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		42621F0025A76E2E0057ECFE /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"$(SRCROOT)/input.xcfilelist",
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-				"$(SRCROOT)/Demo/output.xcfilelist",
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
-		};
 		80501C2725A7C31F00ADE32C /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
