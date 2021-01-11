@@ -580,8 +580,6 @@
 				DEVELOPMENT_TEAM = 43253H4X22;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/Frameworks",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Braintree-Demo-Info.plist";
@@ -608,8 +606,6 @@
 				DEVELOPMENT_TEAM = 43253H4X22;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/Frameworks",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Braintree-Demo-Info.plist";
