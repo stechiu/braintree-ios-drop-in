@@ -25,6 +25,7 @@
 #define SAVED_PAYMENT_METHODS_COLLECTION_HEIGHT 165
 
 @interface BTPaymentSelectionViewController ()
+@property (nonatomic, strong) UILabel *titleLabel;
 @property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic, strong) UIView *scrollViewContentWrapper;
 @property (nonatomic, strong) UIStackView *stackView;
@@ -69,6 +70,7 @@ static BOOL _vaultedCardAppearAnalyticSent = NO;
     
     self.navigationItem.leftBarButtonItem = [[BTUIKBarButtonItem alloc] initWithTitle:BTUIKLocalizedString(CANCEL_ACTION) style:UIBarButtonItemStylePlain target:nil action:nil];
 
+    // TODO: - should this title support dynamic fonts?
     self.title = BTUIKLocalizedString(SELECT_PAYMENT_LABEL);
     
     self.view.translatesAutoresizingMaskIntoConstraints = false;
@@ -449,6 +451,9 @@ static BOOL _vaultedCardAppearAnalyticSent = NO;
     cell.iconView.paymentOptionType = option;
     cell.type = option;
 
+    [BTUIKAppearance styleAdjustsToSystemFontSize:cell.label];
+    cell.label.numberOfLines = 0;
+
     return cell;
 }
 
@@ -492,7 +497,7 @@ static BOOL _vaultedCardAppearAnalyticSent = NO;
 }
 
 - (CGFloat)tableView:(__unused UITableView *)tableView heightForRowAtIndexPath:(__unused NSIndexPath *)indexPath {
-    return 44.0;
+    return UITableViewAutomaticDimension;
 }
 
 #pragma mark UITableViewDataSource
