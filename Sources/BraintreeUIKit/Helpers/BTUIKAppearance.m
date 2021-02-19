@@ -131,37 +131,32 @@ static BTUIKAppearance *sharedTheme;
 }
 
 + (void)styleLabelPrimary:(UILabel *)label {
-    label.font = [[BTUIKAppearance sharedInstance].font fontWithSize:UIFont.labelFontSize];
+    label.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
     label.textColor = [BTUIKAppearance sharedInstance].primaryTextColor;
 }
 
 + (void)styleLabelBoldPrimary:(UILabel *)label {
-    label.font = [[BTUIKAppearance sharedInstance].boldFont fontWithSize:UIFont.labelFontSize];
-    label.textColor = [BTUIKAppearance sharedInstance].primaryTextColor;
-}
-
-+ (void)styleSmallLabelBoldPrimary:(UILabel *)label {
-    label.font = [[BTUIKAppearance sharedInstance].boldFont fontWithSize:UIFont.smallSystemFontSize];
+    label.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
     label.textColor = [BTUIKAppearance sharedInstance].primaryTextColor;
 }
 
 + (void)styleSmallLabelPrimary:(UILabel *)label {
-    label.font = [[BTUIKAppearance sharedInstance].font fontWithSize:UIFont.smallSystemFontSize];
+    label.font = [UIFont preferredFontForTextStyle:UIFontTextStyleCaption1];
     label.textColor = [BTUIKAppearance sharedInstance].primaryTextColor;
 }
 
 + (void)styleLabelSecondary:(UILabel *)label {
-    label.font = [[BTUIKAppearance sharedInstance].font fontWithSize:UIFont.smallSystemFontSize];
+    label.font = [UIFont preferredFontForTextStyle:UIFontTextStyleCaption1];
     label.textColor = [BTUIKAppearance sharedInstance].secondaryTextColor;
 }
 
 + (void)styleLargeLabelSecondary:(UILabel *)label {
-    label.font = [[BTUIKAppearance sharedInstance].font fontWithSize:UIFont.labelFontSize];
+    label.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
     label.textColor = [BTUIKAppearance sharedInstance].secondaryTextColor;
 }
 
 + (void)styleSystemLabelSecondary:(UILabel *)label {
-    label.font = [[BTUIKAppearance sharedInstance].font fontWithSize:UIFont.systemFontSize];
+    label.font = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];
     label.textColor = [BTUIKAppearance sharedInstance].secondaryTextColor;
 }
 

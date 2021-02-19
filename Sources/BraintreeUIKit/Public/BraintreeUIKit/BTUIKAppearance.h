@@ -71,7 +71,6 @@ typedef NS_ENUM(NSInteger, BTUIKColorScheme) {
 /// These properties are on the [BTUIKAppearance sharedInstance]
 + (void)styleLabelPrimary:(UILabel *)label;
 + (void)styleLabelBoldPrimary:(UILabel *)label;
-+ (void)styleSmallLabelBoldPrimary:(UILabel *)label;
 + (void)styleSmallLabelPrimary:(UILabel *)label;
 + (void)styleLabelSecondary:(UILabel *)label;
 + (void)styleLargeLabelSecondary:(UILabel *)label;
