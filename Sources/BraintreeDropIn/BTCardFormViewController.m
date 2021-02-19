@@ -185,7 +185,7 @@
     cardNumberHeaderLabel.numberOfLines = 0;
     cardNumberHeaderLabel.textAlignment = NSTextAlignmentCenter;
     cardNumberHeaderLabel.text = BTUIKLocalizedString(ENTER_CARD_DETAILS_HELP_LABEL);
-    [BTUIKAppearance styleAdjustsToSystemFontSize:cardNumberHeaderLabel];
+    [BTUIKAppearance styleLargeLabelSecondary:cardNumberHeaderLabel];
     [self.cardNumberHeader addArrangedSubview:cardNumberHeaderLabel];
     [BTDropInUIUtilities addSpacerToStackView:self.cardNumberHeader beforeView:cardNumberHeaderLabel size: [BTUIKAppearance verticalFormSpace]];
     [self.stackView addArrangedSubview:self.cardNumberHeader];
@@ -196,10 +196,10 @@
         BTUIKFormField *formField = self.formFields[i];
         [self.stackView addArrangedSubview:formField];
         
-        NSLayoutConstraint* heightConstraint = [formField.heightAnchor constraintEqualToConstant:[BTUIKAppearance formCellHeight]];
+//        NSLayoutConstraint* heightConstraint = [formField.heightAnchor constraintEqualToConstant:[BTUIKAppearance formCellHeight]];
         // Setting the priority is necessary to avoid autolayout errors when UIStackView rotates
-        heightConstraint.priority = UILayoutPriorityDefaultHigh;
-        heightConstraint.active = YES;
+//        heightConstraint.priority = UILayoutPriorityDefaultHigh;
+//        heightConstraint.active = YES;
         
         [formField updateConstraints];
     }

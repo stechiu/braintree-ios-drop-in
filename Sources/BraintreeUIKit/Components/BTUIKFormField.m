@@ -12,6 +12,7 @@
 
 @interface BTUIKFormField ()<BTUIKTextFieldEditDelegate>
 
+@property (nonatomic, strong) UIStackView *stackView;
 @property (nonatomic, copy) NSString *previousTextFieldText;
 @property (nonatomic, strong) NSMutableArray *layoutConstraints;
 
@@ -35,18 +36,18 @@
         self.textField.adjustsFontSizeToFitWidth = YES;
         self.textField.returnKeyType = UIReturnKeyNext;
         self.textField.keyboardAppearance = [BTUIKAppearance sharedInstance].keyboardAppearance;
+        self.textField.adjustsFontForContentSizeCategory = YES;
+        self.textField.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
         [self.textField addTarget:self action:@selector(fieldContentDidChange) forControlEvents:UIControlEventEditingChanged];
         [self.textField addTarget:self action:@selector(editingDidBegin) forControlEvents:UIControlEventEditingDidBegin];
         [self.textField addTarget:self action:@selector(editingDidEnd) forControlEvents:UIControlEventEditingDidEnd];
         self.textField.delegate = self;
-        [self addSubview:self.textField];
         
         self.formLabel = [[UILabel alloc] init];
         [BTUIKAppearance styleLabelBoldPrimary:self.formLabel];
         self.formLabel.translatesAutoresizingMaskIntoConstraints = NO;
         self.formLabel.text = @"";
         self.formLabel.accessibilityElementsHidden = YES;
-        [self addSubview:self.formLabel];
 
         [self.formLabel setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisHorizontal];
         [self.formLabel setContentCompressionResistancePriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisHorizontal];
@@ -56,8 +57,17 @@
         
         [self setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
         self.opaque = NO;
-        
-        [self updateConstraints];
+
+        self.stackView = [[UIStackView alloc] initWithArrangedSubviews:@[self.formLabel, self.textField]];
+        self.stackView.axis = UILayoutConstraintAxisHorizontal;
+        self.stackView.alignment = UIStackViewAlignmentLeading;
+        self.stackView.translatesAutoresizingMaskIntoConstraints = NO;
+        [self addSubview:self.stackView];
+
+        [self.stackView.leadingAnchor constraintEqualToAnchor:self.leadingAnchor].active = YES;
+        [self.stackView.trailingAnchor constraintEqualToAnchor:self.trailingAnchor].active = YES;
+        [self.stackView.topAnchor constraintEqualToAnchor:self.topAnchor].active = YES;
+        [self.stackView.bottomAnchor constraintEqualToAnchor:self.bottomAnchor].active = YES;
     }
     return self;
 }
@@ -107,9 +117,7 @@
                                                                                  attribute:NSLayoutAttributeCenterY
                                                                                 multiplier:1.0f
                                                                                   constant:0.0f]]];
-        
-      ;
-        
+
         [self.layoutConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[textField]-[accessoryView]-(PADDING)-|"
                                                                                             options:0
                                                                                             metrics:metrics

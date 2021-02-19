@@ -30,6 +30,7 @@
         self.label = [[UILabel alloc] init];
         [BTUIKAppearance styleLabelPrimary:self.label];
         self.label.translatesAutoresizingMaskIntoConstraints = NO;
+        self.label.numberOfLines = 0;
         [self.labelContainer addSubview:self.label];
 
         self.detailLabel = [[UILabel alloc] init];
