@@ -29,8 +29,8 @@ static BTUIKAppearance *sharedTheme;
 }
 
 - (void)setDefaultProperties {
-    sharedTheme.font = [UIFont systemFontOfSize:10];
-    sharedTheme.boldFont = [UIFont boldSystemFontOfSize:10];
+    sharedTheme.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody]; // [UIFont systemFontOfSize:10];
+    sharedTheme.boldFont = [UIFont preferredFontForTextStyle:UIFontTextStyleTitle3]; // [UIFont boldSystemFontOfSize:10];
     sharedTheme.useBlurs = YES;
     sharedTheme.postalCodeFormFieldKeyboardType = UIKeyboardTypeDefault;
 }
@@ -130,55 +130,67 @@ static BTUIKAppearance *sharedTheme;
     return [sharedTheme.tintColor colorWithAlphaComponent:0.4];
 }
 
+// TODO: figure out appropriate system fonts for different label styles; support for custom fonts??
+
 + (void)styleLabelPrimary:(UILabel *)label {
-    label.font = [[BTUIKAppearance sharedInstance].font fontWithSize:UIFont.labelFontSize];
+    label.font = [BTUIKAppearance sharedInstance].font;
     label.textColor = [BTUIKAppearance sharedInstance].primaryTextColor;
+    label.adjustsFontForContentSizeCategory = YES;
+    label.numberOfLines = 1;
 }
 
 + (void)styleLabelBoldPrimary:(UILabel *)label {
-    label.font = [[BTUIKAppearance sharedInstance].boldFont fontWithSize:UIFont.labelFontSize];
+    label.font = [BTUIKAppearance sharedInstance].boldFont;
     label.textColor = [BTUIKAppearance sharedInstance].primaryTextColor;
+    label.adjustsFontForContentSizeCategory = YES;
+    label.numberOfLines = 1;
 }
 
 + (void)styleSmallLabelBoldPrimary:(UILabel *)label {
-    label.font = [[BTUIKAppearance sharedInstance].boldFont fontWithSize:UIFont.smallSystemFontSize];
+    label.font = [BTUIKAppearance sharedInstance].boldFont;
     label.textColor = [BTUIKAppearance sharedInstance].primaryTextColor;
+    label.adjustsFontForContentSizeCategory = YES;
+    label.numberOfLines = 1;
 }
 
 + (void)styleSmallLabelPrimary:(UILabel *)label {
-    label.font = [[BTUIKAppearance sharedInstance].font fontWithSize:UIFont.smallSystemFontSize];
+    label.font = [BTUIKAppearance sharedInstance].font;
     label.textColor = [BTUIKAppearance sharedInstance].primaryTextColor;
+    label.adjustsFontForContentSizeCategory = YES;
+    label.numberOfLines = 1;
 }
 
 + (void)styleLabelSecondary:(UILabel *)label {
-    label.font = [[BTUIKAppearance sharedInstance].font fontWithSize:UIFont.smallSystemFontSize];
+    label.font = [BTUIKAppearance sharedInstance].font;
     label.textColor = [BTUIKAppearance sharedInstance].secondaryTextColor;
+    label.adjustsFontForContentSizeCategory = YES;
+    label.numberOfLines = 1;
 }
 
 + (void)styleLargeLabelSecondary:(UILabel *)label {
-    label.font = [[BTUIKAppearance sharedInstance].font fontWithSize:UIFont.labelFontSize];
+    label.font = [BTUIKAppearance sharedInstance].font;
     label.textColor = [BTUIKAppearance sharedInstance].secondaryTextColor;
+    label.adjustsFontForContentSizeCategory = YES;
+    label.numberOfLines = 1;
 }
 
 + (void)styleSystemLabelSecondary:(UILabel *)label {
-    label.font = [[BTUIKAppearance sharedInstance].font fontWithSize:UIFont.systemFontSize];
+    label.font = [BTUIKAppearance sharedInstance].font;
     label.textColor = [BTUIKAppearance sharedInstance].secondaryTextColor;
-}
-
-+ (void)styleAdjustsToSystemFontSize:(UILabel *)label {
-    // TODO: - handle custom fonts set by merchant?
-    label.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
     label.adjustsFontForContentSizeCategory = YES;
+    label.numberOfLines = 1;
 }
 
 + (UILabel *)styledNavigationTitleLabel {
     UILabel *tlabel = [[UILabel alloc] initWithFrame:CGRectMake(0,0, 200, 40)];
     tlabel.textAlignment = NSTextAlignmentCenter;
     tlabel.textColor = [BTUIKAppearance sharedInstance].navigationBarTitleTextColor;
-    tlabel.font = [[BTUIKAppearance sharedInstance].boldFont fontWithSize:UIFont.labelFontSize];
+    tlabel.font = [BTUIKAppearance sharedInstance].boldFont;
     tlabel.backgroundColor = UIColor.clearColor;
     tlabel.adjustsFontSizeToFitWidth = YES;
     tlabel.numberOfLines = 2;
+    tlabel.adjustsFontForContentSizeCategory = YES;
+    tlabel.numberOfLines = 1;
     return tlabel;
 }
 
