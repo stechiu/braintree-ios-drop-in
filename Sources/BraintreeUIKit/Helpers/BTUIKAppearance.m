@@ -9,7 +9,11 @@
 @interface BTUIKAppearance ()
 
 @property (nonatomic, strong) UIFont *font;
-@property (nonatomic, strong) UIFont *boldFont;
+
+@property (nonatomic, strong) UIFont *bodyFont;
+@property (nonatomic, strong) UIFont *headlineFont;
+@property (nonatomic, strong) UIFont *subheadlineFont;
+@property (nonatomic, strong) UIFont *captionFont;
 
 @end
 
@@ -30,7 +34,12 @@ static BTUIKAppearance *sharedTheme;
 
 - (void)setDefaultProperties {
     sharedTheme.font = [UIFont systemFontOfSize:10];
-    sharedTheme.boldFont = [UIFont boldSystemFontOfSize:10];
+
+    sharedTheme.bodyFont = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+    sharedTheme.headlineFont = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
+    sharedTheme.subheadlineFont = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];
+    sharedTheme.captionFont = [UIFont preferredFontForTextStyle:UIFontTextStyleCaption1];
+
     sharedTheme.useBlurs = YES;
     sharedTheme.postalCodeFormFieldKeyboardType = UIKeyboardTypeDefault;
 }
@@ -111,18 +120,25 @@ static BTUIKAppearance *sharedTheme;
 - (void)setFontFamily:(NSString *)fontFamily {
     _fontFamily = fontFamily;
     if (fontFamily != nil) {
-        _font = [UIFont fontWithName:fontFamily size:10.0];
+        self.font = [UIFont fontWithName:fontFamily size:10.0];
+        self.bodyFont = [[UIFontMetrics metricsForTextStyle:UIFontTextStyleBody] scaledFontForFont:self.font];
+        self.subheadlineFont = [[UIFontMetrics metricsForTextStyle:UIFontTextStyleSubheadline] scaledFontForFont:self.font];
+        self.captionFont = [[UIFontMetrics metricsForTextStyle:UIFontTextStyleCaption1] scaledFontForFont:self.font];
     } else {
-        _font = [UIFont systemFontOfSize:10.0];
+        self.font = [UIFont systemFontOfSize:10.0];
+        self.bodyFont = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+        self.subheadlineFont = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];
+        self.captionFont = [UIFont preferredFontForTextStyle:UIFontTextStyleCaption1];
     }
 }
 
 - (void)setBoldFontFamily:(NSString *)boldFontFamily {
     _boldFontFamily = boldFontFamily;
     if (boldFontFamily != nil) {
-        _boldFont = [UIFont fontWithName:boldFontFamily size:10.0];
+        UIFont *font = [UIFont fontWithName:boldFontFamily size:10.0];
+        self.headlineFont = [[UIFontMetrics metricsForTextStyle:UIFontTextStyleHeadline] scaledFontForFont:font];
     } else {
-        _boldFont = [UIFont boldSystemFontOfSize:10.0];
+        self.headlineFont = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
     }
 }
 
@@ -131,32 +147,32 @@ static BTUIKAppearance *sharedTheme;
 }
 
 + (void)styleLabelPrimary:(UILabel *)label {
-    label.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+    label.font = [BTUIKAppearance sharedInstance].bodyFont;
     label.textColor = [BTUIKAppearance sharedInstance].primaryTextColor;
 }
 
 + (void)styleLabelBoldPrimary:(UILabel *)label {
-    label.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
+    label.font = [BTUIKAppearance sharedInstance].headlineFont;
     label.textColor = [BTUIKAppearance sharedInstance].primaryTextColor;
 }
 
 + (void)styleSmallLabelPrimary:(UILabel *)label {
-    label.font = [UIFont preferredFontForTextStyle:UIFontTextStyleCaption1];
+    label.font = [BTUIKAppearance sharedInstance].captionFont;
     label.textColor = [BTUIKAppearance sharedInstance].primaryTextColor;
 }
 
 + (void)styleLabelSecondary:(UILabel *)label {
-    label.font = [UIFont preferredFontForTextStyle:UIFontTextStyleCaption1];
+    label.font = [BTUIKAppearance sharedInstance].captionFont;
     label.textColor = [BTUIKAppearance sharedInstance].secondaryTextColor;
 }
 
 + (void)styleLargeLabelSecondary:(UILabel *)label {
-    label.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+    label.font = [BTUIKAppearance sharedInstance].bodyFont;
     label.textColor = [BTUIKAppearance sharedInstance].secondaryTextColor;
 }
 
 + (void)styleSystemLabelSecondary:(UILabel *)label {
-    label.font = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];
+    label.font = [BTUIKAppearance sharedInstance].subheadlineFont;
     label.textColor = [BTUIKAppearance sharedInstance].secondaryTextColor;
 }
 
@@ -164,7 +180,7 @@ static BTUIKAppearance *sharedTheme;
     UILabel *tlabel = [[UILabel alloc] initWithFrame:CGRectMake(0,0, 200, 40)];
     tlabel.textAlignment = NSTextAlignmentCenter;
     tlabel.textColor = [BTUIKAppearance sharedInstance].navigationBarTitleTextColor;
-    tlabel.font = [[BTUIKAppearance sharedInstance].boldFont fontWithSize:UIFont.labelFontSize];
+    tlabel.font = [BTUIKAppearance sharedInstance].headlineFont;
     tlabel.backgroundColor = UIColor.clearColor;
     tlabel.adjustsFontSizeToFitWidth = YES;
     tlabel.numberOfLines = 2;
