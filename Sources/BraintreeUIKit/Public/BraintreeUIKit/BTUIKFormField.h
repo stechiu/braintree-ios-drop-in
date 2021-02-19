@@ -13,8 +13,6 @@
 
 /// The delegate for this form field
 @property (nonatomic, weak) id<BTUIKFormFieldDelegate> delegate;
-/// Whether to vibrate on invalid input
-@property (nonatomic, assign) BOOL vibrateOnInvalidInput;
 /// Is the form field currently valid, this does not imply it is completed
 @property (nonatomic, assign, readonly) BOOL valid;
 /// Is the entry completed
