@@ -14,8 +14,7 @@
     if (self) {
         self.label = [[UILabel alloc] init];
         self.backgroundColor = [BTUIKAppearance sharedInstance].formFieldBackgroundColor;
-        // TODO: - this is the last place we use the default font property; can we get rid of it?
-        self.label.font = [[BTUIKAppearance sharedInstance].font fontWithSize:24];
+        self.label.font = [BTUIKAppearance sharedInstance].titleFont;
         self.label.textColor = [BTUIKAppearance sharedInstance].primaryTextColor;
         self.label.translatesAutoresizingMaskIntoConstraints = NO;
         self.label.textAlignment = NSTextAlignmentCenter;

@@ -8,12 +8,11 @@
 
 @interface BTUIKAppearance ()
 
-@property (nonatomic, strong) UIFont *font;
-
 @property (nonatomic, strong) UIFont *bodyFont;
 @property (nonatomic, strong) UIFont *headlineFont;
 @property (nonatomic, strong) UIFont *subheadlineFont;
 @property (nonatomic, strong) UIFont *captionFont;
+@property (nonatomic, strong) UIFont *titleFont;
 
 @end
 
@@ -33,12 +32,11 @@ static BTUIKAppearance *sharedTheme;
 }
 
 - (void)setDefaultProperties {
-    sharedTheme.font = [UIFont systemFontOfSize:10];
-
     sharedTheme.bodyFont = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
     sharedTheme.headlineFont = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
     sharedTheme.subheadlineFont = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];
     sharedTheme.captionFont = [UIFont preferredFontForTextStyle:UIFontTextStyleCaption1];
+    sharedTheme.titleFont = [UIFont preferredFontForTextStyle:UIFontTextStyleTitle2];
 
     sharedTheme.useBlurs = YES;
     sharedTheme.postalCodeFormFieldKeyboardType = UIKeyboardTypeDefault;
@@ -120,15 +118,16 @@ static BTUIKAppearance *sharedTheme;
 - (void)setFontFamily:(NSString *)fontFamily {
     _fontFamily = fontFamily;
     if (fontFamily != nil) {
-        self.font = [UIFont fontWithName:fontFamily size:10.0];
-        self.bodyFont = [[UIFontMetrics metricsForTextStyle:UIFontTextStyleBody] scaledFontForFont:self.font];
-        self.subheadlineFont = [[UIFontMetrics metricsForTextStyle:UIFontTextStyleSubheadline] scaledFontForFont:self.font];
-        self.captionFont = [[UIFontMetrics metricsForTextStyle:UIFontTextStyleCaption1] scaledFontForFont:self.font];
+        UIFont *font = [UIFont fontWithName:fontFamily size:10.0];
+        self.bodyFont = [[UIFontMetrics metricsForTextStyle:UIFontTextStyleBody] scaledFontForFont:font];
+        self.subheadlineFont = [[UIFontMetrics metricsForTextStyle:UIFontTextStyleSubheadline] scaledFontForFont:font];
+        self.captionFont = [[UIFontMetrics metricsForTextStyle:UIFontTextStyleCaption1] scaledFontForFont:font];
+        self.titleFont = [[UIFontMetrics metricsForTextStyle:UIFontTextStyleTitle2] scaledFontForFont:font];
     } else {
-        self.font = [UIFont systemFontOfSize:10.0];
         self.bodyFont = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
         self.subheadlineFont = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];
         self.captionFont = [UIFont preferredFontForTextStyle:UIFontTextStyleCaption1];
+        self.titleFont = [UIFont preferredFontForTextStyle:UIFontTextStyleTitle2];
     }
 }
 
