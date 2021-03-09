@@ -67,6 +67,8 @@
 		8005E86625BB34B5003EC2AC /* MockAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8005E86525BB34B5003EC2AC /* MockAPIClient.swift */; };
 		800FC5E325802B5600DEE132 /* BTUIKMasterCardVectorArtView.m in Sources */ = {isa = PBXBuildFile; fileRef = 800FC5E125802B5600DEE132 /* BTUIKMasterCardVectorArtView.m */; };
 		800FC5E425802B5600DEE132 /* BTUIKMasterCardVectorArtView.h in Headers */ = {isa = PBXBuildFile; fileRef = 800FC5E225802B5600DEE132 /* BTUIKMasterCardVectorArtView.h */; };
+		8026428625F6E30E00C25BDD /* BTUIKRightChevronArtView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8026428425F6E30E00C25BDD /* BTUIKRightChevronArtView.h */; };
+		8026428725F6E30E00C25BDD /* BTUIKRightChevronArtView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8026428525F6E30E00C25BDD /* BTUIKRightChevronArtView.m */; };
 		8068E585256D9C64002904E6 /* BTAPIClient_Internal_Category.h in Headers */ = {isa = PBXBuildFile; fileRef = A56C41B51D83381E000DFFAB /* BTAPIClient_Internal_Category.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		8068E589256D9C68002904E6 /* BTUIKBarButtonItem_Internal_Declaration.h in Headers */ = {isa = PBXBuildFile; fileRef = A56C41B71D833A6B000DFFAB /* BTUIKBarButtonItem_Internal_Declaration.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		A03FC5AB215AD10B00E3DF95 /* BTUIKCardholderNameFormField.h in Headers */ = {isa = PBXBuildFile; fileRef = A03FC5A9215AD10B00E3DF95 /* BTUIKCardholderNameFormField.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -299,6 +301,8 @@
 		8005E86525BB34B5003EC2AC /* MockAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIClient.swift; sourceTree = "<group>"; };
 		800FC5E125802B5600DEE132 /* BTUIKMasterCardVectorArtView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTUIKMasterCardVectorArtView.m; sourceTree = "<group>"; };
 		800FC5E225802B5600DEE132 /* BTUIKMasterCardVectorArtView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTUIKMasterCardVectorArtView.h; sourceTree = "<group>"; };
+		8026428425F6E30E00C25BDD /* BTUIKRightChevronArtView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTUIKRightChevronArtView.h; sourceTree = "<group>"; };
+		8026428525F6E30E00C25BDD /* BTUIKRightChevronArtView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTUIKRightChevronArtView.m; sourceTree = "<group>"; };
 		A03FC5A9215AD10B00E3DF95 /* BTUIKCardholderNameFormField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTUIKCardholderNameFormField.h; sourceTree = "<group>"; };
 		A03FC5AA215AD10B00E3DF95 /* BTUIKCardholderNameFormField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTUIKCardholderNameFormField.m; sourceTree = "<group>"; };
 		A50ED7A51D8AF8C400A78EF0 /* BTPaymentSelectionViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTPaymentSelectionViewControllerTests.m; sourceTree = "<group>"; };
@@ -689,12 +693,16 @@
 				A529012F1D8903A600032220 /* BTUIKJCBVectorArtView.m */,
 				A52901301D8903A600032220 /* BTUIKMaestroVectorArtView.h */,
 				A52901311D8903A600032220 /* BTUIKMaestroVectorArtView.m */,
+				800FC5E225802B5600DEE132 /* BTUIKMasterCardVectorArtView.h */,
+				800FC5E125802B5600DEE132 /* BTUIKMasterCardVectorArtView.m */,
 				A52901341D8903A600032220 /* BTUIKPayPalMonogramCardView.h */,
 				A52901351D8903A600032220 /* BTUIKPayPalMonogramCardView.m */,
 				A52901361D8903A600032220 /* BTUIKPayPalWordmarkCompactVectorArtView.h */,
 				A52901371D8903A600032220 /* BTUIKPayPalWordmarkCompactVectorArtView.m */,
 				A52901381D8903A600032220 /* BTUIKPayPalWordmarkVectorArtView.h */,
 				A52901391D8903A600032220 /* BTUIKPayPalWordmarkVectorArtView.m */,
+				8026428425F6E30E00C25BDD /* BTUIKRightChevronArtView.h */,
+				8026428525F6E30E00C25BDD /* BTUIKRightChevronArtView.m */,
 				A529013A1D8903A600032220 /* BTUIKUnionPayVectorArtView.h */,
 				A529013B1D8903A600032220 /* BTUIKUnionPayVectorArtView.m */,
 				A529013C1D8903A600032220 /* BTUIKUnknownCardVectorArtView.h */,
@@ -706,8 +714,6 @@
 				A52901421D8903A600032220 /* BTUIKVenmoWordmarkVectorArtView.m */,
 				A52901431D8903A600032220 /* BTUIKVisaVectorArtView.h */,
 				A52901441D8903A600032220 /* BTUIKVisaVectorArtView.m */,
-				800FC5E225802B5600DEE132 /* BTUIKMasterCardVectorArtView.h */,
-				800FC5E125802B5600DEE132 /* BTUIKMasterCardVectorArtView.m */,
 				A52901451D8903A600032220 /* Large */,
 			);
 			path = "Vector Art";
@@ -890,6 +896,7 @@
 				A52901A31D8903A600032220 /* BTUIKPaymentOptionType.h in Headers */,
 				A52901A91D8903A700032220 /* BTUIKViewUtil.h in Headers */,
 				A52901EC1D8903A700032220 /* BTUIKLargeApplePayMarkVectorArtView.h in Headers */,
+				8026428625F6E30E00C25BDD /* BTUIKRightChevronArtView.h in Headers */,
 				03AE59581DDE7E8C000B594C /* BTUIKVisualAssetType.h in Headers */,
 				53E78BEA22248BFE000388D3 /* BTUIKLargeHipercardVectorArtView.h in Headers */,
 				A52901B11D8903A700032220 /* BTUIKCardVectorArtView.h in Headers */,
@@ -1223,6 +1230,7 @@
 				A52901DA1D8903A700032220 /* BTUIKUnionPayVectorArtView.m in Sources */,
 				A52901EE1D8903A700032220 /* BTUIKLargeApplePayMarkVectorArtView.m in Sources */,
 				53E78BEB22248BFE000388D3 /* BTUIKLargeHipercardVectorArtView.m in Sources */,
+				8026428725F6E30E00C25BDD /* BTUIKRightChevronArtView.m in Sources */,
 				A52901B01D8903A700032220 /* BTUIKApplePayMarkVectorArtView.m in Sources */,
 				A52901911D8903A600032220 /* BTUIKCardType.m in Sources */,
 				A52901721D8903A600032220 /* BTUIKExpiryInputView.m in Sources */,

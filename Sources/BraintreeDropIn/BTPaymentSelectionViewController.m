@@ -7,6 +7,7 @@
 #import "BTPaymentMethodNonce+DropIn.h"
 #import "BTVaultedPaymentMethodsTableViewCell.h"
 #import "BTPaymentSelectionHeaderView.h"
+#import "BTUIKPayPalMonogramCardView.h"
 
 #ifdef COCOAPODS
 #import <BraintreeDropIn/BraintreeUIKit.h>
@@ -236,11 +237,12 @@ static BOOL _vaultedCardAppearAnalyticSent = NO;
 
         BTDropInPaymentSelectionCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier forIndexPath:indexPath];
 
-        cell.accessoryType = UITableViewCellAccessoryNone;
+//        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+//        [cell setTintColor:UIColor.greenColor]; [BTUIKViewUtil vectorArtViewForPaymentOptionType:self.paymentOptionType];
+
         cell.selectionStyle = UITableViewCellSelectionStyleDefault;
         BTUIKPaymentOptionType option = ((NSNumber*)self.paymentOptionsData[indexPath.row]).intValue;
 
-        cell.detailLabel.text = @"";
         cell.label.text = [BTUIKViewUtil nameForPaymentMethodType:option];
         if (option == BTUIKPaymentOptionTypeUnknown) {
             cell.label.text = BTUIKLocalizedString(CREDIT_OR_DEBIT_CARD_LABEL);
