@@ -25,7 +25,7 @@
                 _blurStyle = UIBlurEffectStyleExtraLight;
                 _activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
                 _overlayColor = [UIColor btuik_colorFromHex:@"000000" alpha:0.5];
-                _tintColor = UIColor.greenColor;
+                _tintColor = [UIColor btuik_colorFromHex:@"2489F6" alpha:1.0];
                 _disabledColor = UIColor.lightGrayColor;
                 _errorForegroundColor = [UIColor btuik_colorFromHex:@"ff3b30" alpha:1.0];
                 _switchThumbTintColor =  UIColor.whiteColor;

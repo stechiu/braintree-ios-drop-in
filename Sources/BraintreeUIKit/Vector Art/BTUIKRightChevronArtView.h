@@ -2,4 +2,6 @@
 
 @interface BTUIKRightChevronArtView : BTUIKVectorArtView
 
+- (instancetype)initWithColor:(UIColor *)color;
+
 @end

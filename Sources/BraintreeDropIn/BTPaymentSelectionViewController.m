@@ -7,7 +7,8 @@
 #import "BTPaymentMethodNonce+DropIn.h"
 #import "BTVaultedPaymentMethodsTableViewCell.h"
 #import "BTPaymentSelectionHeaderView.h"
-#import "BTUIKPayPalMonogramCardView.h"
+#import "BTUIKRightChevronArtView.h"
+#import "BTUIKAmExVectorArtView.h"
 
 #ifdef COCOAPODS
 #import <BraintreeDropIn/BraintreeUIKit.h>
@@ -237,8 +238,19 @@ static BOOL _vaultedCardAppearAnalyticSent = NO;
 
         BTDropInPaymentSelectionCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier forIndexPath:indexPath];
 
-//        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-//        [cell setTintColor:UIColor.greenColor]; [BTUIKViewUtil vectorArtViewForPaymentOptionType:self.paymentOptionType];
+        // cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+
+        BTUIKRightChevronArtView *art = [[BTUIKRightChevronArtView alloc] initWithColor:BTUIKAppearance.sharedInstance.placeholderTextColor];
+        UIImage *image = [art imageOfSize:CGSizeMake(20, 20)];
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+        UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+//        UIImageView *imageView2 = [UIImgev]
+        imageView.frame = view.bounds;
+
+        [view addSubview:imageView];
+        cell.accessoryView = view;
+
+        // to do a BTUIKViewUtil that returns an imageView
 
         cell.selectionStyle = UITableViewCellSelectionStyleDefault;
         BTUIKPaymentOptionType option = ((NSNumber*)self.paymentOptionsData[indexPath.row]).intValue;
