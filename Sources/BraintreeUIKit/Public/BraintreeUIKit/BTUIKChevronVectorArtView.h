@@ -4,6 +4,6 @@
 #import <BraintreeUIKit/BTUIKVectorArtView.h>
 #endif
 
-@interface BTUIKRightChevronArtView : BTUIKVectorArtView
+@interface BTUIKChevronVectorArtView : BTUIKVectorArtView
 
 @end

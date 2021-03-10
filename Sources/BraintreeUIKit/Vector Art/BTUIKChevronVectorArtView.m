@@ -1,4 +1,4 @@
-#import "BTUIKRightChevronArtView.h"
+#import "BTUIKChevronVectorArtView.h"
 
 #ifdef COCOAPODS
 #import <BraintreeDropIn/BTUIKAppearance.h>
@@ -6,7 +6,7 @@
 #import <BraintreeUIKit/BTUIKAppearance.h>
 #endif
 
-@implementation BTUIKRightChevronArtView
+@implementation BTUIKChevronVectorArtView
 
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];

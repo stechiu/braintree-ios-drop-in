@@ -7,7 +7,6 @@
 #import "BTPaymentMethodNonce+DropIn.h"
 #import "BTVaultedPaymentMethodsTableViewCell.h"
 #import "BTPaymentSelectionHeaderView.h"
-#import "BTUIKRightChevronArtView.h"
 
 #ifdef COCOAPODS
 #import <BraintreeDropIn/BraintreeUIKit.h>
