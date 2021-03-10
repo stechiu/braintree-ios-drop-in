@@ -2,8 +2,10 @@
 
 #ifdef COCOAPODS
 #import <BraintreeDropIn/UIColor+BTUIK.h>
+#import <BraintreeDropIn/BTUIKRightChevronArtView.h>
 #else
 #import <BraintreeUIKit/UIColor+BTUIK.h>
+#import <BraintreeUIKit/BTUIKRightChevronArtView.h>
 #endif
 
 @interface BTDropInPaymentSelectionCell()
@@ -43,6 +45,8 @@
         self.iconView.translatesAutoresizingMaskIntoConstraints = NO;
         [self.contentView addSubview:self.iconView];
         self.backgroundColor = [UIColor clearColor];
+
+        self.accessoryView = [[BTUIKRightChevronArtView alloc] initWithFrame:CGRectMake(0, 0, 15, 15)];
 
         self.bottomBorder = [UIView new];
         self.bottomBorder.translatesAutoresizingMaskIntoConstraints = NO;

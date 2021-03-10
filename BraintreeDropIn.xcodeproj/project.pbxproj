@@ -1,4 +1,4 @@
-/// !$*UTF8*$!
+// !$*UTF8*$!
 {
 	archiveVersion = 1;
 	classes = {
@@ -56,7 +56,7 @@
 		8005E86625BB34B5003EC2AC /* MockAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8005E86525BB34B5003EC2AC /* MockAPIClient.swift */; };
 		800FC5E325802B5600DEE132 /* BTUIKMasterCardVectorArtView.m in Sources */ = {isa = PBXBuildFile; fileRef = 800FC5E125802B5600DEE132 /* BTUIKMasterCardVectorArtView.m */; };
 		800FC5E425802B5600DEE132 /* BTUIKMasterCardVectorArtView.h in Headers */ = {isa = PBXBuildFile; fileRef = 800FC5E225802B5600DEE132 /* BTUIKMasterCardVectorArtView.h */; };
-		8026428625F6E30E00C25BDD /* BTUIKRightChevronArtView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8026428425F6E30E00C25BDD /* BTUIKRightChevronArtView.h */; };
+		8026428625F6E30E00C25BDD /* BTUIKRightChevronArtView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8026428425F6E30E00C25BDD /* BTUIKRightChevronArtView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8026428725F6E30E00C25BDD /* BTUIKRightChevronArtView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8026428525F6E30E00C25BDD /* BTUIKRightChevronArtView.m */; };
 		8068E585256D9C64002904E6 /* BTAPIClient_Internal_Category.h in Headers */ = {isa = PBXBuildFile; fileRef = A56C41B51D83381E000DFFAB /* BTAPIClient_Internal_Category.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		8068E589256D9C68002904E6 /* BTUIKBarButtonItem_Internal_Declaration.h in Headers */ = {isa = PBXBuildFile; fileRef = A56C41B71D833A6B000DFFAB /* BTUIKBarButtonItem_Internal_Declaration.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -596,6 +596,7 @@
 				A52901121D8903A600032220 /* BTUIKPaymentOptionCardView.h */,
 				A52901131D8903A600032220 /* BTUIKPaymentOptionType.h */,
 				A52901141D8903A600032220 /* BTUIKPostalCodeFormField.h */,
+				8026428425F6E30E00C25BDD /* BTUIKRightChevronArtView.h */,
 				A52901151D8903A600032220 /* BTUIKSecurityCodeFormField.h */,
 				D6C2F3322239917F00DFF7E5 /* BTUIKSwitchFormField.h */,
 				A52901161D8903A600032220 /* BTUIKTextField.h */,
@@ -754,7 +755,6 @@
 				A52901371D8903A600032220 /* BTUIKPayPalWordmarkCompactVectorArtView.m */,
 				A52901381D8903A600032220 /* BTUIKPayPalWordmarkVectorArtView.h */,
 				A52901391D8903A600032220 /* BTUIKPayPalWordmarkVectorArtView.m */,
-				8026428425F6E30E00C25BDD /* BTUIKRightChevronArtView.h */,
 				8026428525F6E30E00C25BDD /* BTUIKRightChevronArtView.m */,
 				A529013A1D8903A600032220 /* BTUIKUnionPayVectorArtView.h */,
 				A529013B1D8903A600032220 /* BTUIKUnionPayVectorArtView.m */,

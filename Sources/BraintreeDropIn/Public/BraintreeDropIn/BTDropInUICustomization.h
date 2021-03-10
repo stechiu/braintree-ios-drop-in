@@ -65,7 +65,7 @@ typedef NS_ENUM(NSInteger, BTDropInColorScheme) {
 /// Placeholder text color for form fields
 @property (nonatomic, strong) UIColor *placeholderTextColor;
 
-/// Line and border color
+/// Line, border, and disclosure indicator color
 @property (nonatomic, strong) UIColor *lineColor;
 
 /// Error foreground color

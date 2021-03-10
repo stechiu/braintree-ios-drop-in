@@ -1,34 +1,23 @@
 #import "BTUIKRightChevronArtView.h"
 
-@interface BTUIKRightChevronArtView ()
-
-@property (nonatomic, copy, nullable) UIColor *color;
-
-@end
+#ifdef COCOAPODS
+#import <BraintreeDropIn/BTUIKAppearance.h>
+#else
+#import <BraintreeUIKit/BTUIKAppearance.h>
+#endif
 
 @implementation BTUIKRightChevronArtView
 
-- (id)init {
-    self = [super init];
+- (id)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
     if (self) {
-        self.artDimensions = CGSizeMake(40.0f, 25.0f);
+        self.artDimensions = CGSizeMake(45.0f, 29.0f);
         self.opaque = NO;
-    }
-    return self;
-}
-
-- (instancetype)initWithColor:(UIColor *)color {
-    self = [super init];
-    if (self) {
-        self.artDimensions = CGSizeMake(40.0f, 25.0f);
-        self.opaque = NO;
-        self.color = color;
     }
     return self;
 }
 
 - (void)drawArt {
-
     //// Bezier Drawing
     UIBezierPath* bezierPath = [UIBezierPath bezierPath];
     [bezierPath moveToPoint: CGPointMake(15.5, 12.21)];
@@ -39,9 +28,8 @@
     [bezierPath addLineToPoint: CGPointMake(17.21, 10.5)];
     [bezierPath addLineToPoint: CGPointMake(15.5, 12.21)];
     [bezierPath closePath];
-    [self.color setFill];
+    [BTUIKAppearance.sharedInstance.lineColor setFill];
     [bezierPath fill];
-
 }
 
 @end
