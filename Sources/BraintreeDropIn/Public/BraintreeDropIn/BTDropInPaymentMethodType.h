@@ -9,7 +9,7 @@ typedef NS_ENUM(NSInteger, BTDropInPaymentMethodType) {
     BTDropInPaymentMethodTypeJCB,
     BTDropInPaymentMethodTypeLaser,
     BTDropInPaymentMethodTypeMaestro,
-    BTDropInPaymentMethodTypeUnionPay,
+    BTDropInPaymentMethodTypeUnionPay __attribute__((deprecated)),
     BTDropInPaymentMethodTypeHiper,
     BTDropInPaymentMethodTypeHipercard,
     BTDropInPaymentMethodTypeSolo,
