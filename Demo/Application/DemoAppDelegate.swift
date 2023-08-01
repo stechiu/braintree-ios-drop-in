@@ -22,10 +22,11 @@ class DemoAppDelegate: UIResponder, UIApplicationDelegate {
         registerUserDefaults()
         BTAppContextSwitcher.setReturnURLScheme(BraintreeDemoAppDelegatePaymentsURLScheme)
         
-        let rootViewController = DemoContainerViewController()
-        let navigationController = UINavigationController(rootViewController: rootViewController)
+        // let rootViewController = DemoContainerViewController()
+        let rootViewController = BlankViewController()
+//        let navigationController = UINavigationController(rootViewController: rootViewController)
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = navigationController
+        self.window?.rootViewController = rootViewController // navigationController
         self.window?.makeKeyAndVisible()
         return true
     }
