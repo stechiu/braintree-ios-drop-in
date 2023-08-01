@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -38,6 +38,7 @@
 		8068E520256D73D5002904E6 /* BraintreeDropIn_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8068E51F256D73D5002904E6 /* BraintreeDropIn_UITests.swift */; };
 		8068E52C256D7459002904E6 /* BraintreeDropIn_EditMode_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8068E52B256D7459002904E6 /* BraintreeDropIn_EditMode_UITests.swift */; };
 		8068E532256D7489002904E6 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8068E531256D7489002904E6 /* Helpers.swift */; };
+		80D36DEC2A79546E0035380E /* BlankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D36DEB2A79546E0035380E /* BlankViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,6 +147,7 @@
 		8068E52B256D7459002904E6 /* BraintreeDropIn_EditMode_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BraintreeDropIn_EditMode_UITests.swift; sourceTree = "<group>"; };
 		8068E531256D7489002904E6 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		8075165E25F7E8F9007DEFA1 /* BraintreeDropIn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BraintreeDropIn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		80D36DEB2A79546E0035380E /* BlankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlankViewController.swift; sourceTree = "<group>"; };
 		9C2BBA20267BEEA900FB38B4 /* Demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Demo.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -239,6 +241,7 @@
 				4245D868256C5C4E00F1A413 /* DemoAppDelegate.swift */,
 				4245D86A256C5C4E00F1A413 /* DemoBaseViewController.swift */,
 				4245D869256C5C4E00F1A413 /* DemoContainerViewController.swift */,
+				80D36DEB2A79546E0035380E /* BlankViewController.swift */,
 				4245D87C256C5C4E00F1A413 /* DemoDropInView.swift */,
 				4245D86C256C5C4E00F1A413 /* DemoDropInViewController.swift */,
 				4245D87E256C5C4E00F1A413 /* DemoMerchantAPIClient.swift */,
@@ -467,6 +470,7 @@
 				4245D882256C5C4E00F1A413 /* DemoContainerViewController.swift in Sources */,
 				4245D880256C5C4E00F1A413 /* DemoSettings.swift in Sources */,
 				4245D883256C5C4E00F1A413 /* DemoBaseViewController.swift in Sources */,
+				80D36DEC2A79546E0035380E /* BlankViewController.swift in Sources */,
 				4221CD56260E66D30025F6AD /* DemoPurchaseButton.swift in Sources */,
 				4245D884256C5C4E00F1A413 /* ViewHelpers.swift in Sources */,
 				4245D88C256C5C4F00F1A413 /* DemoDropInView.swift in Sources */,
