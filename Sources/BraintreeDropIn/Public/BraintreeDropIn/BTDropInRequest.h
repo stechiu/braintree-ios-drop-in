@@ -76,6 +76,9 @@ typedef NS_ENUM(NSInteger, BTFormFieldSetting) {
 /// Optional: Customization options for Braintree Drop-in's user interface.
 @property (nonatomic, strong, nullable) BTDropInUICustomization *uiCustomization;
 
+/// TODO: - Move to internal header; Exposed for testing
+@property (nonatomic, assign) BOOL mockTokenizationAPI;
+
 @end
 
 NS_ASSUME_NONNULL_END

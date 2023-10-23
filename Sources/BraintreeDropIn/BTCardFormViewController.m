@@ -593,6 +593,13 @@
     self.view.userInteractionEnabled = NO;
     __block UINavigationController *navController = self.navigationController;
 
+    if (self.dropInRequest.mockTokenizationAPI == YES) {
+        BTCardNonce *fakeCardNonce = [[BTCardNonce alloc] init];
+        // TODO: - Mock BTCardNonce in ObjC (using internal header?) Or OCMock
+        // stub last 4, nonce, & other values our ui tests asserts on
+        [self.delegate cardTokenizationCompleted:fakeCardNonce error:nil sender:self];
+    }
+    
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
     // NEXT_MAJOR_VERSION: - Replace with non-deprecated `tokenizeCard()` method.
