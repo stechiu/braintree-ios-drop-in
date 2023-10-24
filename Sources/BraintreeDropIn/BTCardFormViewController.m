@@ -598,6 +598,7 @@
         // TODO: - Mock BTCardNonce in ObjC (using internal header?) Or OCMock
         // stub last 4, nonce, & other values our ui tests asserts on
         [self.delegate cardTokenizationCompleted:fakeCardNonce error:nil sender:self];
+        return;
     }
     
 #pragma clang diagnostic push

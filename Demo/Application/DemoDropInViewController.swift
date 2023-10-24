@@ -1,6 +1,6 @@
 import UIKit
 import PassKit
-import BraintreeDropIn
+@testable import BraintreeDropIn
 
 class DemoDropInViewController: DemoBaseViewController, DemoDropInViewDelegate {
     
@@ -49,6 +49,7 @@ class DemoDropInViewController: DemoBaseViewController, DemoDropInViewDelegate {
         dropInRequest.cardholderNameSetting = DemoSettings.cardholderNameSetting
         dropInRequest.vaultCard = DemoSettings.vaultCardSetting
         dropInRequest.allowVaultCardOverride = DemoSettings.allowVaultCardOverrideSetting
+        dropInRequest.mockTokenizationAPI = true
         
         if ProcessInfo.processInfo.arguments.contains("-PayPalOneTime") {
             dropInRequest.payPalRequest = BTPayPalCheckoutRequest(amount: "4.77")
